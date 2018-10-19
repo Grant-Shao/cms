@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ SITENAME }}</title>
+</head>
+<body>
+{{ SITENAME }}
+<br /><br /><br />
+所有类别:<br />
+<div>
+{% for type in types %}
+    <a href="/type/{{ type }}/1/">{{ type }}</a>
+{% endfor %}
+</div>
+<br /><br />
+所有标签:<br />
+<div>
+{% for tag in tags %}
+    <a href="/tag/{{ tag }}/1/">{{ tag }}</a>
+{% endfor %}
+</div>
+
+
+<br /><br />
+
+<div>
+热门笑话:<br />
+{% for article in articles %}
+<div>
+    <a href="/article/{{ article.id }}/">{{ article.title }}</a>
+</div>
+{% endfor %}
+</div>
+
+
+
+</body>
+</html>

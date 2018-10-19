@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ SITENAME }}</title>
+</head>
+<body>
+{{ SITENAME }}
+testing
+<div>
+    title:<br />
+    {{ obj.title }}
+</div>
+
+<div>
+    content:<br />
+    {{ obj.content }}
+</div>
+
+<div>
+    tag:
+    {{ obj.tag_id }}
+</div>
+
+<div>
+    type:
+    {{ obj.type }}
+</div>
+
+<br />
+<br />
+<br />
+<form method="POST">
+    {% csrf_token %}
+    <textarea name="comment" ></textarea>
+    <br />
+    <input type="submit" name="F1" value="submit">
+
+</form>
+
+
+
+</body>
+</html>
